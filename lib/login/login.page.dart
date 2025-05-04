@@ -271,7 +271,7 @@ class _LoginState extends ConsumerState<Login> {
 
                     // ✅ Store phone number in Hive
                     var box = Hive.box("authBox");
-                    box.put('phone', phonController.text);
+                    await box.put('phone', phonController.text);
 
                     // ✅ Go to OTP Page
                     Navigator.push(
